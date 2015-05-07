@@ -5,7 +5,6 @@ class Note
     @date = new MyDate 12, 5, 2015, 11, 23, 35
 
   show: ->
-  	debugger
   	@date
 
 note = new Note 'aaaaa', 'bbbbbb'
