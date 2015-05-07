@@ -44,19 +44,28 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
+	var MyDate, Note, note;
+
 	MyDate = __webpack_require__(1);
 
-	function Note(header, desc) {
-	  this.header = header;
-	  this.desc = desc;
-	  this.date = new MyDate(12, 5, 2015);
-	}
+	Note = (function() {
+	  function Note(head, desc) {
+	    this.head = head;
+	    this.desc = desc;
+	    this.date = new MyDate(12, 5, 2015, 11, 23, 35);
+	  }
 
-	Note.prototype.show = function(){
-	  alert('header: ' + this.header + '\ndescription: ' + this.desc + '\n' + this.date.show())
-	}
+	  Note.prototype.show = function() {
+	    return this.date;
+	  };
 
-	var note = new Note('Очень важная запись','а это не менее важное описание');
+	  return Note;
+
+	})();
+
+	note = new Note('aaaaa', 'bbbbbb');
+
+	console.log(note.show());
 
 
 /***/ },

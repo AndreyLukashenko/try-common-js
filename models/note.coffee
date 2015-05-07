@@ -1,8 +1,11 @@
-MyDate = require './MyDate.coffee'
+MyDate = require './my-date.coffee'
 
 class Note
-  cunstructor: (@head, @desc)->
-    date = MyDate 12, 5, 2015, 11, 23, 35
+  constructor: (@head, @desc)->
+    @date = new MyDate 12, 5, 2015, 11, 23, 35
 
+  show: ->
+  	@date
 
-note = Note 'aaaaa', 'bbbbbb'
+note = new Note 'aaaaa', 'bbbbbb'
+console.log note.show()

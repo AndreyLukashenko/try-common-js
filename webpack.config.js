@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './models/note.js',
+  entry: './models/note.coffee',
   output: {
     path: './dist',
     filename: 'bundle.js'
